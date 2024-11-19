@@ -46,7 +46,6 @@ get("/:from_currency/:to_currency") do
   raw_result = HTTP.get(convert_rate_url)
   parsed_result = JSON.parse(raw_result)
   @result = parsed_result.fetch("result")
-  puts @result
 
 
   erb(:page_two)
